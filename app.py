@@ -10,7 +10,7 @@ from resources.item import Item, ItemList
 from resources.store import Store,StoreList
 
 app= Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']= os.environ.get('HEROKU_POSTGRESQL_AQUA_URL','sqlite3:///data.db')
+app.config['SQLALCHEMY_DATABASE_URI']= os.environ.get('HEROKU_POSTGRESQL_AQUA_URL','sqlite:///data.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 app.config['PROPAGATE_EXCEPTIONS']=True
 app.secret_key= 'jose'
